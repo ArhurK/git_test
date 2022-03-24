@@ -1,0 +1,73 @@
+---
+title: "git_test"
+author: "Arthur Kiehl"
+date: "24/03/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown : on veut just tester git !!
+
+```{r}
+library(questionr)
+library(ggplot2)
+data("hdv2003")
+d <- hdv2003
+```
+
+
+```{r message=FALSE, warning=FALSE}
+ggplot(d) +
+  aes(x = heures.tv) +
+  geom_histogram() +
+  ggtitle("Nombres d'heures passées devant la télévision") +
+  xlab("Heures") +
+  ylab("Effectifs")
+```
+```{r warning=FALSE}
+ggplot(d) +
+  aes(x = heures.tv) +
+  geom_histogram(fill ="orange", colour = "black", binwidth = 2) +
+  ggtitle("Nombres d'heures passées devant la télévision") +
+  xlab("Heures") +
+  ylab("Effectifs")
+```
+
+
+## On sait pas trop quoi faire 
+
+
+
+
+```{r}
+ggplot(d) +
+  aes(x = heures.tv) +
+  geom_density() +
+  ggtitle("Nombres d'heures passées devant la télévision") +
+  xlab("Heures") +
+  ylab("Densité")
+```
+## Version 2 
+
+
+
+```{r}
+ggplot(d) +
+  aes(x = heures.tv) +
+  geom_density(adjust = 1.5) +
+  ggtitle("Nombres d'heures passées devant la télévision") +
+  xlab("Heures") +
+  ylab("Densité")
+```
+
+```{r}
+ggplot(d) +
+  aes(x = heures.tv) +
+  stat_ecdf() +
+  xlab("Heures") +
+  ylab("Fonction de répartition cumulée")
+```
+
