@@ -45,7 +45,7 @@ ggplot(d) +
 ```{r}
 ggplot(d) +
   aes(x = heures.tv) +
-  geom_density() +
+  geom_density(fill="blue") +
   ggtitle("Nombres d'heures passées devant la télévision") +
   xlab("Heures") +
   ylab("Densité")
@@ -57,7 +57,7 @@ ggplot(d) +
 ```{r}
 ggplot(d) +
   aes(x = heures.tv) +
-  geom_density(adjust = 1.5) +
+  geom_density(adjust = 1.5, fill="blue") +
   ggtitle("Nombres d'heures passées devant la télévision") +
   xlab("Heures") +
   ylab("Densité")
