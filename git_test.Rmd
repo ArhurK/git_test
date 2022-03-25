@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown : on veut just tester git !!
+## R Markdown : on veut tester git !!
 
 ```{r}
 library(questionr)
